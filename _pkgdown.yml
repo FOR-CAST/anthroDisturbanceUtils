@@ -1,0 +1,10 @@
+url: https://for-cast.github.io/anthroDisturbanceUtils/
+
+template:
+  bootstrap: 5
+
+reference:
+  - title: Disturbance lists
+    desc: Write a list of disturbance layers to disk, and read it back.
+    contents:
+      - wrapTerraList

@@ -1,0 +1,7 @@
+^LICENSE\.md$
+^\.github$
+^air\.toml$
+^\.claude$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
