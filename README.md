@@ -45,6 +45,14 @@ layers <- unwrapTerraList("theList.rds", generalPath)
 
 Given the URL of a `disturbanceList.zip` instead, `unwrapTerraList()` downloads the archive with `reproducible::prepInputs()` and extracts it into `generalPath` first.
 
+Other functions work on a disturbance list in memory:
+
+- `harmonizeList()` combines the layers of a sector that share a class name;
+- `cleanupList()` removes `NULL` and empty elements;
+- `replaceLayers()` replaces layers, by sector and class;
+- `extractNonPotentialLayers()` lists the sectors and classes that are not potential layers;
+- `disturbancePresenceRaster()` maps where any layer is present, using `flattenTerra()` to collect the layers of a nested list.
+
 ## The archive
 
 A disturbance list on disk is a flat directory, or a flat `disturbanceList.zip`, holding:
@@ -56,4 +64,5 @@ A disturbance list on disk is a flat directory, or a flat `disturbanceList.zip`,
 
 ## Authors
 
-The functions were written by Tati Micheletti for the anthropogenic disturbance modules, and moved here by Alex M. Chubaty (FOR-CAST), who maintains the package.
+Most functions were written by Tati Micheletti for the anthropogenic disturbance modules, with Ronald Kilian, who also wrote their tests.
+Alex M. Chubaty (FOR-CAST) moved them here, and maintains the package.
