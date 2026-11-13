@@ -4,7 +4,18 @@ template:
   bootstrap: 5
 
 reference:
-  - title: Disturbance lists
+  - title: Reading and writing
     desc: Write a list of disturbance layers to disk, and read it back.
     contents:
       - wrapTerraList
+  - title: Disturbance lists
+    desc: Work with a list of disturbance layers, grouped by sector and then by class.
+    contents:
+      - cleanupList
+      - extractNonPotentialLayers
+      - flattenTerra
+      - harmonizeList
+      - replaceLayers
+  - title: Maps
+    contents:
+      - disturbancePresenceRaster

@@ -1,20 +1,24 @@
 Package: anthroDisturbanceUtils
 Title: Utilities for the Anthropogenic Disturbance 'SpaDES' Modules
-Version: 0.0.1
+Version: 0.0.1.9000
 Authors@R: c(
     person("Tati", "Micheletti", , "tati.micheletti@gmail.com", role = "aut"),
     person("Alex M.", "Chubaty", , "achubaty@for-cast.ca", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0001-7146-8135"))
+           comment = c(ORCID = "0000-0001-7146-8135")),
+    person("Ronald", "Kilian", role = "ctb")
   )
 Description: Helpers shared by the anthropogenic disturbance 'SpaDES' modules
     ('anthroDisturbance_DataPrep', 'anthroDisturbance_Generator' and
     'potentialResources'): writing a list of disturbance layers to disk as an
-    indexed archive, and reading it back as 'terra' vector layers.
+    indexed archive, and reading it back as 'terra' vector layers; combining,
+    cleaning and replacing the layers of such a list; and mapping where any
+    disturbance is present.
 License: MIT + file LICENSE
 URL: https://for-cast.github.io/anthroDisturbanceUtils/,
     https://github.com/FOR-CAST/anthroDisturbanceUtils
 BugReports: https://github.com/FOR-CAST/anthroDisturbanceUtils/issues
 Imports:
+    data.table,
     reproducible,
     terra,
     utils
