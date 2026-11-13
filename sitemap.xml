@@ -6,7 +6,13 @@
 <url><loc>https://for-cast.github.io/anthroDisturbanceUtils/index.html</loc></url>
 <url><loc>https://for-cast.github.io/anthroDisturbanceUtils/news/index.html</loc></url>
 <url><loc>https://for-cast.github.io/anthroDisturbanceUtils/reference/anthroDisturbanceUtils-package.html</loc></url>
+<url><loc>https://for-cast.github.io/anthroDisturbanceUtils/reference/cleanupList.html</loc></url>
+<url><loc>https://for-cast.github.io/anthroDisturbanceUtils/reference/disturbancePresenceRaster.html</loc></url>
+<url><loc>https://for-cast.github.io/anthroDisturbanceUtils/reference/extractNonPotentialLayers.html</loc></url>
+<url><loc>https://for-cast.github.io/anthroDisturbanceUtils/reference/flattenTerra.html</loc></url>
+<url><loc>https://for-cast.github.io/anthroDisturbanceUtils/reference/harmonizeList.html</loc></url>
 <url><loc>https://for-cast.github.io/anthroDisturbanceUtils/reference/index.html</loc></url>
+<url><loc>https://for-cast.github.io/anthroDisturbanceUtils/reference/replaceLayers.html</loc></url>
 <url><loc>https://for-cast.github.io/anthroDisturbanceUtils/reference/wrapTerraList.html</loc></url>
 </urlset>
 

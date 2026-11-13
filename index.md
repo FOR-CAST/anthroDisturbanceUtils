@@ -54,6 +54,21 @@ downloads the archive with
 [`reproducible::prepInputs()`](https://reproducible.predictiveecology.org/reference/prepInputs.html)
 and extracts it into `generalPath` first.
 
+Other functions work on a disturbance list in memory:
+
+- [`harmonizeList()`](https://for-cast.github.io/anthroDisturbanceUtils/reference/harmonizeList.md)
+  combines the layers of a sector that share a class name;
+- [`cleanupList()`](https://for-cast.github.io/anthroDisturbanceUtils/reference/cleanupList.md)
+  removes `NULL` and empty elements;
+- [`replaceLayers()`](https://for-cast.github.io/anthroDisturbanceUtils/reference/replaceLayers.md)
+  replaces layers, by sector and class;
+- [`extractNonPotentialLayers()`](https://for-cast.github.io/anthroDisturbanceUtils/reference/extractNonPotentialLayers.md)
+  lists the sectors and classes that are not potential layers;
+- [`disturbancePresenceRaster()`](https://for-cast.github.io/anthroDisturbanceUtils/reference/disturbancePresenceRaster.md)
+  maps where any layer is present, using
+  [`flattenTerra()`](https://for-cast.github.io/anthroDisturbanceUtils/reference/flattenTerra.md)
+  to collect the layers of a nested list.
+
 ## The archive
 
 A disturbance list on disk is a flat directory, or a flat
@@ -73,6 +88,6 @@ still work.
 
 ## Authors
 
-The functions were written by Tati Micheletti for the anthropogenic
-disturbance modules, and moved here by Alex M. Chubaty (FOR-CAST), who
-maintains the package.
+Most functions were written by Tati Micheletti for the anthropogenic
+disturbance modules, with Ronald Kilian, who also wrote their tests.
+Alex M. Chubaty (FOR-CAST) moved them here, and maintains the package.

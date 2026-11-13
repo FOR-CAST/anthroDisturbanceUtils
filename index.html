@@ -10,8 +10,8 @@
 <script src="deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="Utilities for the Anthropogenic Disturbance SpaDES Modules">
-<meta name="description" content="Helpers shared by the anthropogenic disturbance SpaDES modules (anthroDisturbance_DataPrep, anthroDisturbance_Generator and potentialResources): writing a list of disturbance layers to disk as an indexed archive, and reading it back as terra vector layers.">
-<meta property="og:description" content="Helpers shared by the anthropogenic disturbance SpaDES modules (anthroDisturbance_DataPrep, anthroDisturbance_Generator and potentialResources): writing a list of disturbance layers to disk as an indexed archive, and reading it back as terra vector layers.">
+<meta name="description" content="Helpers shared by the anthropogenic disturbance SpaDES modules (anthroDisturbance_DataPrep, anthroDisturbance_Generator and potentialResources): writing a list of disturbance layers to disk as an indexed archive, and reading it back as terra vector layers; combining, cleaning and replacing the layers of such a list; and mapping where any disturbance is present.">
+<meta property="og:description" content="Helpers shared by the anthropogenic disturbance SpaDES modules (anthroDisturbance_DataPrep, anthroDisturbance_Generator and potentialResources): writing a list of disturbance layers to disk as an indexed archive, and reading it back as terra vector layers; combining, cleaning and replacing the layers of such a list; and mapping where any disturbance is present.">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -21,7 +21,7 @@
 
     <a class="navbar-brand me-2" href="index.html">anthroDisturbanceUtils</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.1.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -109,6 +109,19 @@
 <span><span class="fu"><a href="reference/wrapTerraList.html">wrapTerraList</a></span><span class="op">(</span><span class="va">disturbanceList</span>, <span class="va">generalPath</span>, zipFiles <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span><span class="va">layers</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/wrapTerraList.html">unwrapTerraList</a></span><span class="op">(</span><span class="st">"theList.rds"</span>, <span class="va">generalPath</span><span class="op">)</span></span></code></pre></div>
 <p>Given the URL of a <code>disturbanceList.zip</code> instead, <code><a href="reference/wrapTerraList.html">unwrapTerraList()</a></code> downloads the archive with <code><a href="https://reproducible.predictiveecology.org/reference/prepInputs.html" class="external-link">reproducible::prepInputs()</a></code> and extracts it into <code>generalPath</code> first.</p>
+<p>Other functions work on a disturbance list in memory:</p>
+<ul>
+<li>
+<code><a href="reference/harmonizeList.html">harmonizeList()</a></code> combines the layers of a sector that share a class name;</li>
+<li>
+<code><a href="reference/cleanupList.html">cleanupList()</a></code> removes <code>NULL</code> and empty elements;</li>
+<li>
+<code><a href="reference/replaceLayers.html">replaceLayers()</a></code> replaces layers, by sector and class;</li>
+<li>
+<code><a href="reference/extractNonPotentialLayers.html">extractNonPotentialLayers()</a></code> lists the sectors and classes that are not potential layers;</li>
+<li>
+<code><a href="reference/disturbancePresenceRaster.html">disturbancePresenceRaster()</a></code> maps where any layer is present, using <code><a href="reference/flattenTerra.html">flattenTerra()</a></code> to collect the layers of a nested list.</li>
+</ul>
 </div>
 <div class="section level2">
 <h2 id="the-archive">The archive<a class="anchor" aria-label="anchor" href="#the-archive"></a>
@@ -124,7 +137,7 @@
 <div class="section level2">
 <h2 id="authors">Authors<a class="anchor" aria-label="anchor" href="#authors"></a>
 </h2>
-<p>The functions were written by Tati Micheletti for the anthropogenic disturbance modules, and moved here by Alex M. Chubaty (FOR-CAST), who maintains the package.</p>
+<p>Most functions were written by Tati Micheletti for the anthropogenic disturbance modules, with Ronald Kilian, who also wrote their tests. Alex M. Chubaty (FOR-CAST) moved them here, and maintains the package.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
@@ -156,6 +169,7 @@
 <ul class="list-unstyled">
 <li>Tati Micheletti <br><small class="roles"> Author </small>   </li>
 <li>Alex M. Chubaty <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0001-7146-8135" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>  </li>
+<li><a href="authors.html">More about authors...</a></li>
 </ul>
 </div>
 

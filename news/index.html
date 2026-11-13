@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">anthroDisturbanceUtils</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.1.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,6 +32,23 @@
       <small>Source: <a href="https://github.com/FOR-CAST/anthroDisturbanceUtils/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="development version" id="anthrodisturbanceutils-development-version">anthroDisturbanceUtils (development version)<a class="anchor" aria-label="anchor" href="#anthrodisturbanceutils-development-version"></a></h2>
+<div class="section level3">
+<h3 id="new-features-development-version">New features<a class="anchor" aria-label="anchor" href="#new-features-development-version"></a></h3>
+<ul><li>More helpers move here from the anthropogenic disturbance modules. Their tests, by Ronald Kilian, move with them.</li>
+<li>
+<code><a href="../reference/cleanupList.html">cleanupList()</a></code> removes <code>NULL</code> and empty elements from a disturbance list (from anthroDisturbance_Generator). Its argument <code>outter</code> is now <code>outer</code>.</li>
+<li>
+<code><a href="../reference/disturbancePresenceRaster.html">disturbancePresenceRaster()</a></code> maps where any layer of a disturbance list is present, and <code><a href="../reference/flattenTerra.html">flattenTerra()</a></code> collects the terra layers of a nested list (from the FOR-CAST fork of anthroDisturbance_Generator).</li>
+<li>
+<code><a href="../reference/extractNonPotentialLayers.html">extractNonPotentialLayers()</a></code> lists the sectors and classes of a disturbance list that are not potential layers (from anthroDisturbance_Generator). When there are none, it returns an empty table that still has its two columns.</li>
+<li>
+<code><a href="../reference/harmonizeList.html">harmonizeList()</a></code> combines the layers of a sector that share a class name (from anthroDisturbance_DataPrep). Unlike the module’s copy, it does not return a sector’s other layers twice when only excluded classes repeat, and with <code>whatNotToCombine = NULL</code> it combines every repeated class instead of none.</li>
+<li>
+<code><a href="../reference/replaceLayers.html">replaceLayers()</a></code> replaces layers in a disturbance list, by sector and class. It generalizes <code>replaceList()</code> of potentialResourcesNT_DataPrep and potentialResourcesYT_DataPrep, which replaced four fixed layers.</li>
+</ul></div>
+</div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.0.1" id="anthrodisturbanceutils-001">anthroDisturbanceUtils 0.0.1<a class="anchor" aria-label="anchor" href="#anthrodisturbanceutils-001"></a></h2>
 <div class="section level3">

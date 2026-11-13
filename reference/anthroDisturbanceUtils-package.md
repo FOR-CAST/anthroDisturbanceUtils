@@ -3,7 +3,9 @@
 Helpers shared by the anthropogenic disturbance 'SpaDES' modules
 ('anthroDisturbance_DataPrep', 'anthroDisturbance_Generator' and
 'potentialResources'): writing a list of disturbance layers to disk as
-an indexed archive, and reading it back as 'terra' vector layers.
+an indexed archive, and reading it back as 'terra' vector layers;
+combining, cleaning and replacing the layers of such a list; and mapping
+where any disturbance is present.
 
 ## Modules
 
@@ -47,3 +49,7 @@ Authors:
   ([ORCID](https://orcid.org/0000-0001-7146-8135))
 
 - Tati Micheletti <tati.micheletti@gmail.com>
+
+Other contributors:
+
+- Ronald Kilian \[contributor\]
